@@ -20,7 +20,12 @@ def apply_coupons(cart, coupons)
   newhash = {}
   cart.each do |item, val|
     coupons.each do |coupon|
-      if item == coupon[:item] && val[:count] >
+      if item == coupon[:item] && val[:count] >= coupon[:num]
+        val[:count]=val[:count] - coupon[:num]
+        if newhash[#{item} W/COUPON"]
+          newhash[#{item} W/COUPON"][:count]+=1
+        else
+          hash["#{item} W/COUPON"]
 end
 
 def apply_clearance(cart)
